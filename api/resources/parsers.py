@@ -1,0 +1,30 @@
+from flask_restful import reqparse
+
+user_parser_for_adding = reqparse.RequestParser()
+user_parser_for_adding.add_argument('email', required=True)
+user_parser_for_adding.add_argument('username', required=True)
+user_parser_for_adding.add_argument('first_name', required=True)
+user_parser_for_adding.add_argument('last_name', required=True)
+user_parser_for_adding.add_argument('password', required=True)
+
+user_parser_for_updating = reqparse.RequestParser()
+user_parser_for_updating.add_argument('username')
+user_parser_for_updating.add_argument('first_name')
+user_parser_for_updating.add_argument('last_name')
+user_parser_for_updating.add_argument('password')
+
+element_parser_for_adding = reqparse.RequestParser()
+element_parser_for_adding.add_argument('short_name', required=True)
+element_parser_for_adding.add_argument('full_name', required=True)
+element_parser_for_adding.add_argument('description', required=True)
+element_parser_for_adding.add_argument('mass', type=float, required=True)
+element_parser_for_adding.add_argument('row', type=int, required=True)
+element_parser_for_adding.add_argument('column', type=int, required=True)
+
+element_parser_for_updating = reqparse.RequestParser()
+element_parser_for_updating.add_argument('short_name')
+element_parser_for_updating.add_argument('full_name')
+element_parser_for_updating.add_argument('description')
+element_parser_for_updating.add_argument('mass', type=float)
+element_parser_for_updating.add_argument('row', type=int)
+element_parser_for_updating.add_argument('column', type=int)
