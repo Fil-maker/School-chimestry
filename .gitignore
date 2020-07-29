@@ -1,0 +1,16 @@
+**/__pycache__/
+*.pyc
+*.pyo
+.idea/
+
+**/*.log
+
+/runner.py
+/app_runner.py
+/api/db/
+**/logs/
+/venv/
+/api_runner.py
+/misschedule/node_modules/
+/misschedule/package.json
+/misschedule/gulpfile.js
